@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Denied - You Shall Not Pass!</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #1e1e1e;
+        color: #f0f0f0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .gandalf-image {
+        width: 250px;
+        height: 200px;
+        max-width: 80vw;
+        max-height: 300px;
+        border-radius: 10px;
+        object-fit: contain;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .gandalf-image:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+        filter: brightness(1.1) contrast(1.1);
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 0.5rem;
+        color: #ff6b6b;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      h1:hover {
+        color: #ff4757;
+        transform: scale(1.05);
+        text-shadow: 
+          0 0 10px rgba(255, 107, 107, 0.8),
+          0 0 20px rgba(255, 107, 107, 0.6),
+          0 0 30px rgba(255, 107, 107, 0.4),
+          2px 2px 4px rgba(0, 0, 0, 0.8);
+        filter: drop-shadow(0 0 15px rgba(255, 107, 107, 0.5));
+      }
+
+      .main-message {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+        max-width: 600px;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+      }
+
+      .caption {
+        font-style: italic;
+        color: #aaa;
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        margin-bottom: 1rem;
+      }
+
+      .contact-message {
+        font-size: clamp(1rem, 2.5vw, 1.2rem);
+        max-width: 600px;
+        margin: 1rem 0;
+        line-height: 1.4;
+      }
+
+      .footer {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        color: #555;
+        margin-top: auto;
+        padding-top: 2rem;
+      }
+
+      /* Mobile optimizations */
+      @media (max-width: 768px) {
+        body {
+          padding: 15px;
+        }
+
+        .container {
+          gap: 1.5rem;
+        }
+
+        .gandalf-image {
+          width: 180px;
+          height: 150px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          padding: 10px;
+        }
+
+        .container {
+          gap: 1rem;
+        }
+
+        .gandalf-image {
+          width: 150px;
+          height: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="gandalfsmol.png"
+        alt="Gandalf - You Shall Not Pass!"
+        class="gandalf-image"
+      />
+
+      <h1>You Shall Not Pass!</h1>
+
+      <p class="main-message">
+        This website has been blocked by Gandalf (or at least someone with his
+        wisdom)...
+      </p>
+
+      <p class="caption">(But why are you accessing this site? 🤔)</p>
+
+      <p class="contact-message">
+        If you believe this is an error, contact your network admin. You know
+        who it is. 🧙‍♂️
+      </p>
+
+      <div class="footer">
+        pfBlockerNG © 2025 | Block page crafted with wizardry
+      </div>
+    </div>
+  </body>
+</html>
